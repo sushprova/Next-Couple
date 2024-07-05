@@ -14,7 +14,7 @@ export default function TopNav() {
   return (
     <Navbar
       maxWidth="xl"
-      className="bg-gradient-to-r from-purple-400 to-purple-800"
+      className="bg-gradient-to-r from-purple-400 to-purple-800 mx-auto"
       classNames={{
         item: [
           "text-xl",
