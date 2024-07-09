@@ -7,7 +7,8 @@ import { GiPadlock } from "react-icons/gi";
 import {
   registerSchema,
   RegisterSchema,
-} from "@/app/lib/schemas/registerSchema";
+} from "./../../../lib/schemas/registerSchema";
+import { registerUser } from "./../../actions/authActions";
 
 export default function RegisterForm() {
   const {
@@ -15,12 +16,14 @@ export default function RegisterForm() {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm<RegisterSchema>({
-    resolver: zodResolver(registerSchema),
+    // resolver: zodResolver(registerSchema),
     mode: "onTouched",
   });
 
-  const onSubmit = (data: RegisterSchema) => {
-    console.log(data);
+  const onSubmit = async (data: RegisterSchema) => {
+    // console.log(data);
+    const result = await registerUser(data);
+    console.log(result);
   };
 
   return (

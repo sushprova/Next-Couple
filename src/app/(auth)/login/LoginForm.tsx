@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { GiPadlock } from "react-icons/gi";
 import { string } from "zod";
 // import { loginSchema, LoginSchema } from "./../../lib/schemas/loginSchema";
-import { loginSchema, LoginSchema } from "@/app/lib/schemas/loginSchema";
+import { loginSchema, LoginSchema } from "./../../../lib/schemas/loginSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function LoginForm() {
