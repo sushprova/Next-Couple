@@ -3,6 +3,7 @@ import { ActionResult } from './../../types';
 import { prisma } from '../../lib/prisma';
 import {registerSchema, RegisterSchema} from './../../lib/schemas/registerSchema';
 import bcrypt from 'bcryptjs'
+import { User } from '@prisma/client';
 
 export async function registerUser(data: RegisterSchema): Promise<ActionResult<User>>{
     try {
